@@ -16,3 +16,5 @@ This repo contains base files to deploy Poste.io Personal Mail Server.
 ## Pre Deployment requirements
 
 - A valid mail URL domain (ex.: correo.midominio.cl) configured as a dns A Record.
+
+**Source Project:** <https://poste.io/>

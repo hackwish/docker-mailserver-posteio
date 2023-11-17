@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mailserver:
+    image: analogic/poste.io
+    container_name: mailserver
+    restart: always
+    network_mode: "host"
+    expose:
+      - 25
+      - 110
+      - 143
+      - 465
+      - 587
+      - 993
+      - 995
+    environment:
+      PUID: 1000
+      PGID: 1000
+      SET_CONTAINER_TIMEZONE: 'true'
+      CONTAINER_TIMEZONE: America/Santiago
+      TZ: America/Santiago
+    volumes:
+      - ./mail_data:/data
+volumes:
+  mail_data:

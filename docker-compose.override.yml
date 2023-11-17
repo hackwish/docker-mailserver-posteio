@@ -1,0 +1,13 @@
+services:
+  mailserver:
+    expose:
+      - 80
+      - 443
+    environment:
+      h: URL.MAILSERVER.DOMINIO # CAMBIAR. Direccion del servidor de mail hosting
+      HTTPS: "ON"
+      HTTP_PORT: 80
+      HTTPS_PORT: 443
+      DISABLE_CLAMAV: "TRUE" # Deshabiitar CLAMAV (para bajo consumo de memoria)
+      DISABLE_RSPAMD: "TRUE" # Deshabilitar Rspamd (para bajo consumo de memoria)
+      DISABLE_ROUNDCUBE: "TRUE" # Deshabilitar Roundcube webmail
